@@ -1,0 +1,152 @@
+/*my stylesheet*/
+/*title page fonts*/
+h1{
+  font-family: 'Oswald', sans-serif;
+  color: #3d3d3d;
+  font-size: 6.5em;
+  font-weight: bold;
+}
+h2{
+  font-family: 'Oswald', sans-serif;
+  color: #BBDBF4;
+  font-weight: bold;
+font-size: 2em;
+}
+
+h3{
+  font-family: 'Oswald', sans-serif;
+  color: #3d3d3d;
+  font-weight: bold;
+font-size: 1.8em;
+margin: auto;
+text-align:center;
+
+
+}
+/*this is the styling for the map*/
+.map{
+  margin-top:40px;
+}
+/*styling for the header div*/
+.title-top{
+  margin:auto;
+  position:center;
+}
+
+p{
+font-family: 'Noto Sans', sans-serif;
+font-size:11pt;
+color: #3d3d3d;
+text-align:center;
+padding:10px;
+}
+
+.border{
+  border: 1px solid black !important;
+
+/*the line dividers*/
+}
+
+.border-top{
+  border-top: 1px solid black;
+  margin:20px;
+  padding:20px;
+}
+
+.col-md-8{
+  margin:auto;
+  padding-top:30px;
+}
+/*font for the table content*/
+.table-title{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+
+.table-body{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/*fonts for the table sections*/
+table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
+    border-top: 1px solid;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+/*the container for the site*/
+.container{
+  width:80%;
+  margin:auto;
+  padding:20px;
+}
+
+
+/*this is the line chart showing the ten states with the highest drug deaths*/
+.chart{
+  height:400px;
+
+}
+/*this is the class applied to both of the pie charts*/
+.death{
+  height:300px;
+  width:150px;
+
+}
+
+/*this is the smaller line graph styling*/
+.chart-cali{
+  height:300px;
+}
+
+/*this is for the intro paragraph*/
+.intro{
+  width:80%;
+  margin:auto;
+}
+
+
+/*background colors for the selected section of the table*/
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: #BBDBF4 !important;
+}
+
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: #BBDBF4; !important;
+}
+
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: white !important;
+}
+
+/*this is the styling for the line graph axis texts*/
+.c3-axis-y text
+{
+  font-family: 'Oswald';
+
+}
+
+.c3-axis-x text
+{
+  font-family: 'Oswald';
+
+}
+
+/*styles for the map chart*/
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+/*this is the divider for the pie and line graph on california*/
+.dashed-border{
+  border-right: 1px dashed;
+}
+
+/*these are my link styles*/
+a{
+  color:#619FCF;
+}
+
+a:hover{
+  text-decoration: none;
+  color:#BBDBF4;
+}

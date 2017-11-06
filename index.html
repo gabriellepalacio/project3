@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+<!-- these are my stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link href="css/c3.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<!-- my fonts -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Oswald" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+<!-- title and introduction -->
+<div class="container">
+  <div class="row">
+  <h2 class="title-top">DRUG POISONING MORTALITIES:</h2>
+</div>
+<div class="row">
+  <h1 class="title-top">UNITED STATES</h1>
+</div>
+<div class="row">
+  <p class="intro">This dataset describes drug poisoning deaths at the U.S. at the state level by selected demographic characteristics, and includes age-adjusted death rates for drug poisoning from 1999 to 2015. Deaths are classified using the International Classification of Diseases, Tenth Revision. Drug-poisoning deaths are defined as having underlying cause-of-death codes: unintentional, suicide, homicide, or undetermined intent. Estimates are based on the National Vital Statistics System multiple cause-of-death mortality files.</p>
+</div>
+  <div class="row border-top">
+<!-- rising death rates line graph section -->
+      <div id="chart" class="chart col-md-8" ></div>
+<div class=" col-md-4">
+  <h3>   Rising Death Rates</h3>
+<p>These ten states represent the highest recorded drug related deaths in the United States. This line graph shows the relationship between the death rate recorded in 1999 (shown in light blue) and the death rate recorded in 2015 (shown in navy). It shows that while the overall pattern remains the same, with California in the lead, there has been a sharp increase of drug related deaths in this sixteen year period. The recorded data highlighted the high number of deaths occuring in California, and examination shows that this pattern persists today.</p>
+</div>
+</div>
+<!-- map chart showing that california is the worst -->
+<div class="row border-top">
+  <div class="map col-md-4">
+    <h3>Drug Related Death Distribution by State</h3>
+  <p>This map shows the distribution of drug related deaths across the United States in 2015. The darkest colors show which states had a more dense amount of deaths, while the lighter color represents less deaths. The total number of drug related mortalities across the United States in 2015 was 568,842. As the map outlines, the three states with the highest death counts were California, Ohio and Pennsylvania. These three states accounted for 11,233 drug related mortalities in 2015. </p>
+  </div>
+  <div id="chartdiv" class="col-md-8"></div>
+</div>
+<!-- pie graphs and line graphs on california -->
+<div class="row border-top">
+
+  <h3>California's Death Rate From 1999-2015</h3>
+</div>
+<div class="row">
+<!-- cali pie chart -->
+<div id="death-chart" class="death col-md-4 dashed-border" width="100%" height="100%"></div>
+<!-- ohio pie chart -->
+<div id="death-chart2" class="col-md-4 death dashed-border" width="100%" height="100%"></div>
+<!-- cali line graph -->
+<div id="chart-cali" class="chart-cali col-md-4" ></div>
+
+<div class="col-md-4 dashed-border"><h3>California Percentages</h3><p>From 1999 to 2015, there were 568,842 total deaths attributed to drug related causes, and 59,427 of those were reported in California. This means that 9.5% of all drug related deaths during this time period occurred in California, making it the area with the highest percentage of deaths.</p></div>
+<div class="col-md-4 dashed-border"><h3>Ohio Percentages</h3><p>The state with the next highest percentage of drug related deaths between 1999 and 2015 is Ohio. With 26,314 deaths attributed to drug related causes during this time period,  Ohio is responsible for a mere 4.4% of these total deaths. </p></div>
+<div class="col-md-4 "><h3>California Death Rise</h3><p>In 1999, California had a population total of 33,499,204. In 2015, this number rose to 39,144,818. Despite only a 14% increase in total population between 1999 and 2015, California's drug related death's have risen by 175%. </p></div>
+  </div>
+
+<!-- table of all the data used -->
+<div class="row border-top">
+  <h3>Table of United State's Drug Poisoning Mortality</h3>
+  <p>This table includes all of the data used to create this dashboard. It also includes all of the drug related mortality information for each state organized by year from 1999 to 2015. By clicking the arrows next to each category header, you can choose how to view the data. You may also use the search bar to look at more specific data.</p>
+  <div class="col-md-8">
+  <table id="death-table" class="display" cellspacing="0" width="100%">
+          <thead>
+              <tr class="table-title">
+                  <th >Year</th>
+                  <th>State</th>
+                  <th>Deaths</th>
+                  <th>Population</th>
+                  <th>Crude Death Rate</th>
+                  <th>Standard Error for Crude Rate</th>
+              </tr>
+          </thead>
+          <tfoot>
+              <tr class="table-title">
+                <th>Year</th>
+                <th>State</th>
+                <th>Deaths</th>
+                <th>Population</th>
+                <th>Crude Death Rate</th>
+                <th>Standard Error for Crude Rate</th>
+              </tr>
+          </tfoot>
+          <tbody>
+
+          </tbody>
+      </table>
+
+</div>
+
+
+  </div>
+
+
+
+<!-- the credits  -->
+<div class="border-top">
+<h3>Credit</h3>
+<p>The information for this dashboard was gathered by the Center for Disease Control. The original dataset that was used can be found <a href="https://catalog.data.gov/dataset/drug-poisoning-mortality-u-s-and-state-trends-united-states-20022014">here</a>. This dataset was provided by <a href="https://www.data.gov/">Data.gov</a>. </p>
+</div>
+    </div>
+    <!-- <div id="gender-chart" class="half-chart col-md-6" >Gender Chart Here</div>
+
+    <div id="age-chart" class="half-chart col-md-6">Age numbers here</div> -->
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+  <!-- Resources For Map Chart -->
+  <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+  <script src="https://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+  <!-- D3, C3 stuff -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/c3.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
